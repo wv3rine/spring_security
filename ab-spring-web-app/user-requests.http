@@ -1,0 +1,36 @@
+GET localhost:8080/api/v1/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLaW5nIE1hY2JldGgxMjMiLCJpYXQiOjE3MDIyNDQ4NjAsImV4cCI6MTcwMjMzMTI2MH0.9_pxUMsBrnwK78Q7m9nyEtkRzUEsiOXcc_Kd8KEg9zY
+
+###
+POST localhost:8080/api/v1/users
+Content-Type: application/json
+
+{
+  "login": "King Macbeth",
+  "password": "12345"
+}
+
+###
+PUT localhost:8080/api/v1/users/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLaW5nIE1hY2JldGgxMjMiLCJpYXQiOjE3MDIyOTQ2MDUsImV4cCI6MTcwMjM4MTAwNX0.ib6wmegalp0Aw2yGgaXsCLFfjnaTUG3BEtDhgjXelAg
+
+{
+  "name": "Roman Hludov",
+  "password": "123",
+  "url": "urlol,",
+  "role": "USER"
+}
+
+###
+GET localhost:8080/api/v1/users/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLaW5nIE1hY2JldGgxMjMiLCJpYXQiOjE3MDIyOTQ2MDUsImV4cCI6MTcwMjM4MTAwNX0.ib6wmegalp0Aw2yGgaXsCLFfjnaTUG3BEtDhgjXelAg
+
+{
+  "login": "Roman Hludov",
+  "password": "123"
+}
+
+###
+GET http://localhost:8080/api/v1/users?pageSize=2&page=2

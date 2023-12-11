@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/users
+    username: postgres
+    password: smallville8
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      # не факт
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+application:
+  token:
+    signing:
+      key: a068b187b788d8b275792f93e96326102419b3a177d312a2f5a883f93d245eb2
+    expiration: 86400000 # a day
+  url:
+    users-api: api/v1/users
+    auth-api: api/v1/auth
